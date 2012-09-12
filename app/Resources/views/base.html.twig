@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>{% trans %}Delivery - Sign in{% endtrans %}</title>
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/reset.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}" />
+
+        {% block javascripts %}
+            <script type="text/javascript" src="{{ asset('js/jquery.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('js/dropdown.js') }}"></script>
+        {% endblock %}
+
+    </head>
+    <body>
+        {% block head %}{% endblock %}
+
+        {% block body %}{% endblock %}
+
+    </body>
+</html> 

@@ -1,0 +1,15 @@
+parameters:
+    database_driver: pdo_mysql
+    database_host: 192.168.1.252
+    database_port: 3306
+    database_name: delivery
+    database_user: root
+    database_password: Avalon
+    mailer_transport: smtp
+    mailer_host: "develop-server.ssp-soft.org"
+    mailer_user: "jira@ssp-soft.org"
+    mailer_password: "JiraPass"
+    locale: "ru"
+    secret: aa9ab3ad8eb6a8373f7e5d13bafcc10cf
+    database_path: null
+

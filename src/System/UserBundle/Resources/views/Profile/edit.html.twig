@@ -1,0 +1,50 @@
+{% extends 'DeliveryMainBundle:Main:main.html.twig' %}
+
+{% block body %}
+	<div class="form_sign well mr_t_100">
+		<div class="tittle">
+	    	{% trans %}Edit profile{% endtrans %}
+	    </div>    
+	    <div class="clearfloat"></div>
+	    <form novalidate action="{{ path('profile_edit') }}" method="post">
+	    	{{form_widget(form.userName, { 'attr': {'placeholder': 'Your name'|trans~':', 'class': 'username' } }) }}
+	    	{{form_errors(form.userName)}}
+	    	{{form_widget(form.user.email, { 'attr': {'placeholder': 'Your email'|trans~':', 'class': 'password' } }) }}
+	    	{{form_errors(form.user.email)}}
+	    	{{form_widget(form.user.emailOld) }}
+	    	{{ form_widget(form.user.newPassword.first, { 'attr': {'placeholder': 'Enter password'|trans~':', 'class': 'password' }}) }}
+	    	{{form_errors(form.user.newPassword.first)}}
+	    	{{ form_widget(form.user.newPassword.second, { 'attr': {'placeholder': 'Repeat password'|trans~':', 'class': 'password' }}) }}
+	    	{{form_errors(form.user.newPassword.second)}}
+	    	<input class="btn btn-info btn-large width_100 mr_t_5" id="first_btn" name="first_btn" type="submit" value="{% trans %}Change{% endtrans %}" />
+	    	<div class="clearfloat"></div>
+        <div class="old_pass_block" id="old_pass_block" hidden>
+            {{ form_widget(form.user.oldPassword, { 'attr': {'placeholder': 'Old password'|trans~':', 'class': 'password mr_t_10' }}) }}
+	    	{{form_errors(form.user.oldPassword)}}	
+	        <input id="old_pass" class="btn btn-info btn-large width_100 mr_t_5" id="second_btn" name="" type="submit" value="{% trans %}Change{% endtrans %}" />
+            <div class="clearfloat"></div>
+        </div>
+	     {{ form_rest(form) }}	 
+	    </form>
+	    <div class="clearfloat"></div>
+	</div>
+
+<script type="text/javascript">
+  	$(document).ready(function(){
+		$("#first_btn").click(function(){
+			var pass_first = $("#system_userbundle_editprofiletype_user_newPassword_first").val();
+			var pass_second = $("#system_userbundle_editprofiletype_user_newPassword_second").val();
+			var new_email = $("#system_userbundle_editprofiletype_user_email").val();
+			var old_email = $("#system_userbundle_editprofiletype_user_emailOld").val();
+			if (((pass_first != '') && (pass_second != '')) || (new_email != old_email))
+			{
+				$("#old_pass_block").slideDown();
+				return false;
+			}
+			
+		});
+	});	
+</script>	
+{% endblock %}
+
+

@@ -1,0 +1,95 @@
+.form_sign {
+	width: 250px;
+	margin: 150px auto 0;
+	box-shadow: 0 0 24px #A8A8A8;
+}
+.form_sign form{
+	margin: 0;
+}
+.form_sign .error ul{
+	margin-left:  17px;
+}
+.form_sign .error ul li{
+	list-style-type: disc;
+	color: #b14141;
+}
+.form_sign .prology{
+	text-align: center;
+	font-weight: bold;
+	font-size: 28px;
+	font-family: Rockwell;
+	font-style: italic;
+}
+.form_sign .username {
+	width: 240px;
+	background-color: #fff;
+	height: 28px;
+	font-size: 22px;
+	line-height: 29px;
+	text-align: center;
+	/*margin-top: 15px;*/
+}
+.form_sign .password {
+	width: 240px;	
+	background-color: #fff;
+	height: 28px;
+	font-size: 22px;
+	line-height: 29px;
+	margin-top: 5px;
+	text-align: center;
+}
+.form_sign .links  {
+	text-align: center;
+	margin-top: 10px;
+}
+.form_sign .tittle  {
+	font-size: 24px;
+	text-align: center;
+	padding-bottom: 20px;
+}
+.form_sign .notice_text {
+	text-align: center;
+}
+.header {
+	width: 940px;
+	margin: 0 auto;
+	border: 1px solid #08C;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	border-radius: 6px;
+	padding: 10px;
+	background-color: #F8F8F8;
+}
+.header .logo {
+	float: left;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 5px;
+}
+.header .main_nav {
+	float: left;
+	margin: 0;
+	text-transform: uppercase;
+	margin-left: 10px;
+	margin-top: 6px;
+}
+.header .main_nav li {
+	float: left;
+	margin: 0 10px;
+	font-size: 18px;
+	font-weight: bold;
+}
+.header .user_photo {
+	float: right;
+	margin-left: 10px;
+}
+.header .cash {
+	float: right;
+	font-size: 18px;
+	margin-top: 6px;
+	margin-right: 50px;
+}
+.form_sign .old_pass_block   {
+	display: none;
+}

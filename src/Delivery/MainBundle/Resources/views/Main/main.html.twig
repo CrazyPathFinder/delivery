@@ -1,0 +1,46 @@
+{% extends '::base.html.twig' %}
+
+{% block head %}
+	<div class="header">
+		<div class="logo">
+	    	W
+	    </div>
+	    <ul class="main_nav">
+	    	<li>
+	        	<a href="#">
+	            	Обзор
+	            </a>
+	        </li>
+	        <li>
+	        	<a href="#">
+	            	Заказы
+	            </a>
+	        </li>
+	        <li>
+	        	<a href="#">
+	            	Посылки
+	            </a>
+	        </li>
+	        <li>
+	        	<a href="#">
+	            	Финансы
+	            </a>
+	        </li>
+	    </ul>
+	    <img class="user_photo" src="/images/user_photo_little.jpg" alt="" />
+	    <div class="btn-group right">
+	  		<a class="btn btn-primary" href="#">{{name}}</a>
+	  		<a class="btn btn-primary dropdown-toggle height_18" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+	  		<ul class="dropdown-menu">
+	  			
+	    		<li><a href="{{path('profile_edit')}}">
+					<i class="icon-pencil"></i> {% trans %}Profile edit{% endtrans %}</a></li>
+	    		<li><a href="{{path('logout')}}"><i class="icon-trash"></i>{% trans %}Logout{% endtrans %}</a></li>
+	  		</ul>
+		</div>
+	    <div class="cash">
+	    	На счету: 600 EUR
+	    </div>
+	    <div class="clearfloat"></div>
+	</div>
+{% endblock %}

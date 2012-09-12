@@ -1,0 +1,39 @@
+{% extends '::base_user.html.twig' %}
+
+{% block body %}
+   
+    <div class="form_sign well">
+    <div class="tittle">
+         {% trans %}Welcome{% endtrans %}
+    </div>
+    <div class="clearfloat"></div>
+     {% if error %}
+            <div class="error">
+                <ul>
+                    <li>{{ error|trans }}</li>
+                </ul>
+            </div>
+        {% endif %}
+    <div class="clearfloat"></div>
+    <form action="{{ path('login_check') }}" method="post">
+        <input placeholder="{% trans %}Login{% endtrans %}" id="username" name="_username" class="username" value="{{ last_username }}" />
+        <input placeholder="{% trans %}Password{% endtrans %}" type="password" name="_password" class="password" id="password" value="" />
+         <input class="btn btn-info btn-large width_100 mr_t_5" id="_submit" name="_submit" type="submit" value="{% trans %}Sign in{% endtrans %}" />
+        
+    </form>
+    <div class="clearfloat"></div>
+    <div class="links">
+        <a href="{{path('reset_password_request')}}" class="rorgot_pas">
+            {% trans %}Forgot password{% endtrans %}
+        </a>
+        <br />
+        <a href="{{path('registration')}}" class="rorgot_pas">
+            {% trans %}Register as new user{% endtrans %}
+        </a>
+    </div>
+    <div class="clearfloat"></div>
+    </div><!--end form-->
+
+{% endblock %}
+
+   

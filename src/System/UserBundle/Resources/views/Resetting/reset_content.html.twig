@@ -1,0 +1,32 @@
+<div class="form_sign well">
+	<div class="tittle">
+    	{% trans %}Password recovery{% endtrans %}
+    </div>
+	      
+    <div class="clearfloat"></div>
+    <form action="{{ path('system_user_resetting_reset', {'token': token}) }}" {{ form_enctype(form) }} method="post">
+
+    	{{ form_widget(form.new.first, { 'attr': {'placeholder': 'Enter new password'|trans~':', 'class': 'password' }}) }}
+        {{form_errors(form.user.newPassword.first)}}
+    	{{ form_widget(form.new.second, { 'attr': {'placeholder': 'Repeat new password'|trans~':', 'class': 'password' }}) }}
+        {{form_errors(form.user.newPassword.second)}}
+        <input class="btn btn-info btn-large width_100 mr_t_5" id="" name="" type="submit" value="{% trans %}Reset password{% endtrans %}" />
+        {{ form_rest(form) }}
+    </form>
+    <div class="clearfloat"></div>
+</div><!--end form-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

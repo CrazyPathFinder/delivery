@@ -1,0 +1,18 @@
+<div class="form_sign well">
+	<div class="tittle">
+    	{% trans %}Password recovery{%endtrans %}
+    </div>
+    <div class="error">
+    </div>
+    <div class="clearfloat"></div>
+    <form action="{{ path('reset_password_send_email') }}" method="post">
+        <input placeholder="{% trans %}Email{% endtrans %}:" class="password" type="text" id="username" name="username" />
+        <input class="btn btn-info btn-large width_100 mr_t_5" id="" name="" type="submit" value="{% trans %}Send request{% endtrans %}" />
+	       
+    </form>
+    <div class="clearfloat"></div>
+</div><!--end form-->
+
+
+
+

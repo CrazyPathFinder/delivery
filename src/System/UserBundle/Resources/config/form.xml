@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="admin_user.registration.form.type" class="System\UserBundle\Form\RegistrationUserType">
+            <tag name="form.type" alias="registration_user_type" />
+            <argument>System\UserBundle\Entity\User</argument>
+        </service>
+        <service id="admin_user.edit_user.form.type" class="System\UserBundle\Form\EditUserType">
+            <tag name="form.type" alias="edit_user_type" />
+            <argument>System\UserBundle\Entity\User</argument>
+        </service>
+    </services>
+
+</container>

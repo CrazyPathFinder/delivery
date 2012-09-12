@@ -1,0 +1,18 @@
+{% extends '::base.html.twig' %}
+
+{% block body %}
+	<div class="heigh_20"></div>
+	<div class="clearfloat"></div>
+	<div class="sign">
+		<div class="title">{% trans %}Sign up{% endtrans %}</div>
+		<div class="clearfloat"></div>
+		<div class="question">
+
+			{% trans %}Registration confirmed{% endtrans %}.<br/>
+			<a href="{{ path('user_area') }}">{% trans %}Go to user area{% endtrans %}</a>
+		</div>
+		<div class="clearfloat"></div>
+		<div class="heigh_20"></div>
+		<div class="clearfloat"></div>
+	</div>
+{% endblock %}

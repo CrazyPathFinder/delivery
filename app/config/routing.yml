@@ -1,0 +1,21 @@
+# _welcome:
+#     pattern:  /
+#     defaults: { _controller: AcmeDemoBundle:Welcome:index }
+delivery_main:
+    resource: "@DeliveryMainBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+system_user:
+    resource: "@SystemUserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+system_user_security_login:
+    pattern: /
+    defaults:  { _controller: SystemUserBundle:Security:login }    
+
+# Internal routing configuration to handle ESI
+#_internal:
+#    resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
+#    prefix:   /_internal
