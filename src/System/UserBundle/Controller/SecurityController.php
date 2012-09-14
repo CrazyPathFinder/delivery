@@ -61,7 +61,7 @@ class SecurityController extends ContainerAware
      * @Route("/login-redirect", name="login_redirect")
      */
     public function redirectAction()
-    {   echo 'Hello'; 
+    {   
         if ($this->container->get('security.context')->isGranted('ROLE_EMPLOYEE')) {
             return new RedirectResponse($this->container->get('router')->generate('backoffice_main_page'));
         } 

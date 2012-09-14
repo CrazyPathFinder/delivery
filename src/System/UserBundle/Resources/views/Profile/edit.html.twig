@@ -44,7 +44,33 @@
 			
 		});
 	});	
-</script>	
+</script>
+<script type="text/javascript">
+		$(document).ready(function(){
+		$("#system_userbundle_editprofiletype_user_email").keyup(function(){
+			console.log($(this).val(),$(this).attr('id'));
+			var field = $(this);
+			$.ajax({
+					  type: "POST",
+					  url: "/registration/validate/check-unique-email",
+					  data: {fieldId:field.attr('id'), fieldValue:field.val() }
+					  }).done(function( msg ) {
+					  if (msg == "[true]")
+					  {
+					  	
+					  	
+					  	field.css({'border-color':'green'});
+					  }
+					  else
+					  {
+					  	
+					  	field.css({'border-color':'red'});	
+					  }
+					  
+					});
+		});
+	});		
+	</script>	
 {% endblock %}
 
 
