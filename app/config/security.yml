@@ -28,7 +28,7 @@ security:
                 login_path:     /sign_in
                 failure_path:   /sign_in
                 always_use_default_target_path: true
-                default_target_path: /backoffice/main
+                default_target_path: /browse
                 provider:       delivery_user_provider
                 use_referer: true
             anonymous:      ~
@@ -40,5 +40,10 @@ security:
     access_control:
         - { path: ^/profile, roles:  [ROLE_EMPLOYEE, ROLE_ADMIN] }
         - { path: ^/backoffice, roles: [ROLE_EMPLOYEE, ROLE_ADMIN] }
+        - { path: ^/browse, roles: [ROLE_EMPLOYEE, ROLE_ADMIN] }
+        - { path: ^/parcels, roles: [ROLE_EMPLOYEE, ROLE_ADMIN] }
+        - { path: ^/orders, roles: [ROLE_EMPLOYEE, ROLE_ADMIN] }
+        - { path: ^/finance, roles: [ROLE_EMPLOYEE, ROLE_ADMIN] }
+        
         #- { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY, requires_channel: https }
         #- { path: ^/_internal/secure, roles: IS_AUTHENTICATED_ANONYMOUSLY, ip: 127.0.0.1 }

@@ -63,7 +63,7 @@ class SecurityController extends ContainerAware
     public function redirectAction()
     {   
         if ($this->container->get('security.context')->isGranted('ROLE_EMPLOYEE')) {
-            return new RedirectResponse($this->container->get('router')->generate('backoffice_main_page'));
+            return new RedirectResponse($this->container->get('router')->generate('backoffice_browse'));
         } 
     }
 

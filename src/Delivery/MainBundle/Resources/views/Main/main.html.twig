@@ -7,23 +7,23 @@
 	    </div>
 	    <ul class="main_nav">
 	    	<li>
-	        	<a href="#">
-	            	Обзор
+	        	<a href="{{path('backoffice_browse')}}">
+	            	{% trans %} Browse {% endtrans %}
 	            </a>
 	        </li>
 	        <li>
-	        	<a href="#">
-	            	Заказы
+	        	<a href="{{path('backoffice_orders')}}">
+	            	{% trans %} Orders {% endtrans %}
 	            </a>
 	        </li>
 	        <li>
-	        	<a href="#">
-	            	Посылки
+	        	<a href="{{path('backoffice_parcels')}}">
+	            	{% trans %} Parcels {% endtrans %}
 	            </a>
 	        </li>
 	        <li>
-	        	<a href="#">
-	            	Финансы
+	        	<a href="{{path('backoffice_finance')}}">
+	            	{% trans %} Finance {% endtrans %}
 	            </a>
 	        </li>
 	    </ul>

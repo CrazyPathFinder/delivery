@@ -13,7 +13,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
  * @ORM\Table(name="users")
  * @ORM\Entity()
  * @ORM\HasLifecycleCallbacks()
- * @UniqueEntity(fields="email", message="This email already exists", groups={"registration"})
+ * @UniqueEntity(fields="email", message="This email already exists", groups={"registration", "edit_profile"})
  */
 class User implements UserInterface 
 {
@@ -31,9 +31,9 @@ class User implements UserInterface
      * @var string
      *
      * @ORM\Column(name="email", type="string", length=150, nullable=false)
-     * @Assert\NotBlank(groups={"registration"})
+     * @Assert\NotBlank(groups={"registration", "edit_profile"})
      * @Assert\Email(groups={"registration", "edit_profile"})
-     * @Assert\MaxLength(limit=150, groups={"registration"})
+     * @Assert\MaxLength(limit=150, groups={"registration", "edit_profile"})
      */
     protected $email;
 
@@ -74,9 +74,9 @@ class User implements UserInterface
      *
      * @var string
      * 
-     * @Assert\MinLength(limit=6, groups={"registration"})
-     * @Assert\MaxLength(limit=16, groups={"registration"})
-     * @Assert\NotBlank(groups={"registration"})
+     * @Assert\MinLength(limit=6, groups={"registration", "edit_profile"})
+     * @Assert\MaxLength(limit=16, groups={"registration", "edit_profile"})
+     * @Assert\NotBlank(groups={"registration", "edit_profile"})
      */
     protected $plainPassword;
 
